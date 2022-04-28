@@ -1,17 +1,17 @@
-package com.WolfpackMachina.bettersensors.Sensors;
+package com.wolfpackmachina.bettersensors.Sensors;
 
-import com.WolfpackMachina.bettersensors.HardwareMapProvider;
-import com.WolfpackMachina.bettersensors.Utils.MathUtils;
-import com.WolfpackMachina.bettersensors.Utils.RingBuffer;
+import com.wolfpackmachina.bettersensors.HardwareMapProvider;
+import com.wolfpackmachina.bettersensors.Utils.MathUtils;
+import com.wolfpackmachina.bettersensors.Utils.RingBuffer;
 import com.qualcomm.hardware.bosch.BNO055IMU;
 
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.AxesOrder;
 import org.firstinspires.ftc.robotcore.external.navigation.AxesReference;
 import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
-import com.WolfpackMachina.bettersensors.DataTypes.Angle;
-import com.WolfpackMachina.bettersensors.DataTypes.AngularPosition;
-import com.WolfpackMachina.bettersensors.Sensor;
+import com.wolfpackmachina.bettersensors.DataTypes.Angle;
+import com.wolfpackmachina.bettersensors.DataTypes.AngularPosition;
+import com.wolfpackmachina.bettersensors.Sensor;
 
 public class Gyro extends Sensor<AngularPosition> {
 
@@ -177,7 +177,7 @@ public class Gyro extends Sensor<AngularPosition> {
     //TODO: ADD SUPPORT FOR VERTICAL CONTROL HUBS, CURRENT CODE ONLY WORKS FOR VERTICAL HUBS IF PITCH NEVER CHANGES APPRECIABLY
     private BNO055IMU imuConstructor(String deviceName){
         BNO055IMU imu;
-        imu = HardwareMapProvider.hardwareMap.get(BNO055IMU.class, deviceName);
+        imu = useHardwareMap ? hardwareMap.get(BNO055IMU.class, deviceName) : HardwareMapProvider.hardwareMap.get(BNO055IMU.class, deviceName);
         BNO055IMU.Parameters parameters = new BNO055IMU.Parameters();
         parameters.angleUnit           = BNO055IMU.AngleUnit.DEGREES;
         parameters.accelUnit           = BNO055IMU.AccelUnit.METERS_PERSEC_PERSEC;

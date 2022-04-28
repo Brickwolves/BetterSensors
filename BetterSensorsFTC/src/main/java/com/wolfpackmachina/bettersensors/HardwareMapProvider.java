@@ -1,4 +1,4 @@
-package com.WolfpackMachina.bettersensors;
+package com.wolfpackmachina.bettersensors;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.HardwareMap;

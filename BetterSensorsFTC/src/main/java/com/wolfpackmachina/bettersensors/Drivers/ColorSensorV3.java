@@ -1,4 +1,4 @@
-package com.WolfpackMachina.bettersensors.Drivers;
+package com.wolfpackmachina.bettersensors.Drivers;
 /*
 Copyright (c) 2019 REV Robotics LLC
 
@@ -54,16 +54,9 @@ import java.util.Locale;
 // *
 // */
 @SuppressWarnings("WeakerAccess")
-/*@I2cDeviceType
-@DeviceProperties(name = "@string/color_sensor_v3_name",
-        description = "@string/color_sensor_v3_description",
-        xmlTag = "ColorSensorV3",
-        compatibleControlSystems = ControlSystem.REV_HUB, builtIn = true)
 
- */
-//@I2cSensor(name = "Custom Color Driver", description = "pain and suffering", xmlTag = "RevV3Custom")
 @I2cDeviceType
-@DeviceProperties(name = "BetterSensors Rev Color V3",
+@DeviceProperties(name = "BetterSensors RevColorV3",
         description = "color_sensor_v3_description",
         xmlTag = "ColorSensorV3",
         compatibleControlSystems = ControlSystem.REV_HUB, builtIn = true)

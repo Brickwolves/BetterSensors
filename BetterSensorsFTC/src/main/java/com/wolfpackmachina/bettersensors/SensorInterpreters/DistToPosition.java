@@ -1,12 +1,4 @@
-package com.WolfpackMachina.bettersensors.SensorInterpreters;
-
-import static java.lang.Math.cos;
-import static java.lang.Math.toRadians;
-
-
-import com.WolfpackMachina.bettersensors.Sensors.DistanceSensor;
-import com.WolfpackMachina.bettersensors.Sensors.Gyro;
-import com.WolfpackMachina.bettersensors.UpdatingSensorInterpreter;
+package com.wolfpackmachina.bettersensors.SensorInterpreters;
 
 //TODO YEAH BE COOL IF THIS CODE WORKED TOO
 /*

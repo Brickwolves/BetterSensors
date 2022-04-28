@@ -1,12 +1,12 @@
-package com.WolfpackMachina.bettersensors.SensorInterpreters;
+package com.wolfpackmachina.bettersensors.SensorInterpreters;
 
-import static com.WolfpackMachina.bettersensors.Utils.MathUtils.withinRange;
+import static com.wolfpackmachina.bettersensors.Utils.MathUtils.withinRange;
 
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import com.WolfpackMachina.bettersensors.Sensors.Gyro;
+import com.wolfpackmachina.bettersensors.Sensors.Gyro;
 
 public class GyroExtensions {
     

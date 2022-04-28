@@ -1,4 +1,4 @@
-package com.WolfpackMachina.bettersensors.Utils;
+package com.wolfpackmachina.bettersensors.Utils;
 
 import static java.lang.Math.abs;
 import static java.lang.Math.floorMod;
@@ -6,9 +6,6 @@ import static java.lang.Math.floorMod;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
-
-import java.util.ArrayList;
-import java.util.Comparator;
 
 public class MathUtils {
 

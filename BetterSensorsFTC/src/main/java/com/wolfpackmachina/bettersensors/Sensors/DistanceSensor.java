@@ -1,13 +1,14 @@
-package com.WolfpackMachina.bettersensors.Sensors;
+package com.wolfpackmachina.bettersensors.Sensors;
 
-import static com.WolfpackMachina.bettersensors.Utils.MathUtils.withinRange;
+import static com.wolfpackmachina.bettersensors.Utils.MathUtils.withinRange;
 import static com.qualcomm.robotcore.hardware.DistanceSensor.distanceOutOfRange;
 
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
-import com.WolfpackMachina.bettersensors.DataTypes.Distance;
-import com.WolfpackMachina.bettersensors.HardwareMapProvider;
-import com.WolfpackMachina.bettersensors.Sensor;
-import com.WolfpackMachina.bettersensors.Utils.RingBuffer;
+import com.wolfpackmachina.bettersensors.DataTypes.Distance;
+import com.wolfpackmachina.bettersensors.Drivers.ColorSensorV3;
+import com.wolfpackmachina.bettersensors.HardwareMapProvider;
+import com.wolfpackmachina.bettersensors.Sensor;
+import com.wolfpackmachina.bettersensors.Utils.RingBuffer;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class DistanceSensor extends Sensor<Distance> {
 
     @Override
     protected void sensorInit(String hardwareID) {
-        distanceSensor = HardwareMapProvider.hardwareMap.get(com.qualcomm.robotcore.hardware.DistanceSensor.class, hardwareID);
+        distanceSensor = useHardwareMap ? hardwareMap.get(com.qualcomm.robotcore.hardware.DistanceSensor.class, hardwareID) : HardwareMapProvider.hardwareMap.get(com.qualcomm.robotcore.hardware.DistanceSensor.class, hardwareID);
     }
 
     @Override

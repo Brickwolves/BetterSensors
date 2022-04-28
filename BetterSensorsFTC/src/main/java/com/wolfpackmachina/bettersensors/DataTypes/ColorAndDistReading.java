@@ -1,4 +1,4 @@
-package com.WolfpackMachina.bettersensors.DataTypes;
+package com.wolfpackmachina.bettersensors.DataTypes;
 
 public class ColorAndDistReading {
 

@@ -1,4 +1,4 @@
-package com.WolfpackMachina.bettersensors.Utils;
+package com.wolfpackmachina.bettersensors.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

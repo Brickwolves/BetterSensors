@@ -1,4 +1,4 @@
-package com.WolfpackMachina.bettersensors.Drivers;
+package com.wolfpackmachina.bettersensors.Drivers;
 
 import androidx.annotation.NonNull;
 

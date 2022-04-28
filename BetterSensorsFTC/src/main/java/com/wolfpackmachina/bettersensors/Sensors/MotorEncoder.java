@@ -1,7 +1,7 @@
-package com.WolfpackMachina.bettersensors.Sensors;
+package com.wolfpackmachina.bettersensors.Sensors;
 
-import com.WolfpackMachina.bettersensors.HardwareMapProvider;
-import com.WolfpackMachina.bettersensors.Sensor;
+import com.wolfpackmachina.bettersensors.HardwareMapProvider;
+import com.wolfpackmachina.bettersensors.Sensor;
 import com.arcrobotics.ftclib.hardware.motors.MotorEx;
 import com.qualcomm.robotcore.hardware.DcMotor;
 

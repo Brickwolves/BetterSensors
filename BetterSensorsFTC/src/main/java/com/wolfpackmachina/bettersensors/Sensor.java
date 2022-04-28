@@ -1,5 +1,7 @@
-package com.WolfpackMachina.bettersensors;
+package com.wolfpackmachina.bettersensors;
 
+
+import com.qualcomm.robotcore.hardware.HardwareMap;
 
 public abstract class Sensor <T> {
 
@@ -8,6 +10,8 @@ public abstract class Sensor <T> {
     private int pingFrequency;
     private boolean updateSensor;
     protected T readingCache;
+    protected HardwareMap hardwareMap;
+    protected final boolean useHardwareMap;
 
 
 
@@ -21,6 +25,21 @@ public abstract class Sensor <T> {
         updateSensor = true;
         prevTime = System.currentTimeMillis();
         sensorInit(hardwareID);
+        useHardwareMap = false;
+    }
+
+    /**
+     * This should be called by the Sensors class, at the beginning of init, in the Sensors init method.
+     * pingFrequency is how often the sensor data should be updated, leaving this at 0 will ping the sensor every code loop.
+     * @param pingFrequency
+     */
+    protected Sensor(int pingFrequency, String hardwareID, HardwareMap hardwareMap) {
+        this.pingFrequency = pingFrequency;
+        updateSensor = true;
+        prevTime = System.currentTimeMillis();
+        sensorInit(hardwareID);
+        this.hardwareMap = hardwareMap;
+        useHardwareMap = true;
     }
 
     /**

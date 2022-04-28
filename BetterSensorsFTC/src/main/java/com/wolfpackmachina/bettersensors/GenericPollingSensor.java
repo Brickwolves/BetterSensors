@@ -1,6 +1,6 @@
-package com.WolfpackMachina.bettersensors;
+package com.wolfpackmachina.bettersensors;
 
-import com.WolfpackMachina.bettersensors.Utils.GenericDataSupplier;
+import com.wolfpackmachina.bettersensors.Utils.GenericDataSupplier;
 
 public class GenericPollingSensor <T> extends Sensor<T>{
 

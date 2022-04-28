@@ -1,4 +1,4 @@
-package com.WolfpackMachina.bettersensors;
+package com.wolfpackmachina.bettersensors;
 
 public class SensorManager {
 

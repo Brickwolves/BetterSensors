@@ -1,15 +1,14 @@
-package com.WolfpackMachina.bettersensors.Sensors;
-import static com.WolfpackMachina.bettersensors.Utils.MathUtils.withinRange;
+package com.wolfpackmachina.bettersensors.Sensors;
+import static com.wolfpackmachina.bettersensors.Utils.MathUtils.withinRange;
 
-import com.WolfpackMachina.bettersensors.DataTypes.ColorAndDistReading;
-import com.WolfpackMachina.bettersensors.Drivers.ColorSensorV3;
-import com.WolfpackMachina.bettersensors.HardwareMapProvider;
+import com.wolfpackmachina.bettersensors.DataTypes.ColorAndDistReading;
+import com.wolfpackmachina.bettersensors.Drivers.ColorSensorV3;
+import com.wolfpackmachina.bettersensors.HardwareMapProvider;
 import com.qualcomm.robotcore.hardware.HardwareDeviceHealth;
 
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
-import com.WolfpackMachina.bettersensors.DataTypes.ColorAndDistReading;
-import com.WolfpackMachina.bettersensors.Drivers.ColorSensorV3;
-import com.WolfpackMachina.bettersensors.Sensor;
+
+import com.wolfpackmachina.bettersensors.Sensor;
 
 public class ColorSensor extends Sensor<ColorAndDistReading> {
 
@@ -25,7 +24,7 @@ public class ColorSensor extends Sensor<ColorAndDistReading> {
      */
     @Override
     protected void sensorInit(String hardwareID) {
-        colorSensor = HardwareMapProvider.hardwareMap.get(ColorSensorV3.class, hardwareID);
+        colorSensor = useHardwareMap ? hardwareMap.get(ColorSensorV3.class, hardwareID) : HardwareMapProvider.hardwareMap.get(ColorSensorV3.class, hardwareID);
     }
 
     @Override

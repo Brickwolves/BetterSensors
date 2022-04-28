@@ -1,12 +1,4 @@
-package com.WolfpackMachina.bettersensors.SensorInterpreters;
-
-import com.arcrobotics.ftclib.geometry.Pose2d;
-import com.arcrobotics.ftclib.geometry.Rotation2d;
-import com.arcrobotics.ftclib.kinematics.wpilibkinematics.DifferentialDriveOdometry;
-
-import com.WolfpackMachina.bettersensors.Sensors.Gyro;
-import com.WolfpackMachina.bettersensors.Sensors.MotorEncoder;
-import com.WolfpackMachina.bettersensors.UpdatingSensorInterpreter;
+package com.wolfpackmachina.bettersensors.SensorInterpreters;
 
 //TODO: MAKE THIS CODE NOT HORRIBLE
 /*
