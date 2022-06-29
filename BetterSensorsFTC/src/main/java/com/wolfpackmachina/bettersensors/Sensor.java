@@ -20,7 +20,7 @@ public abstract class Sensor <T> {
      * pingFrequency is how often the sensor data should be updated, leaving this at 0 will ping the sensor every code loop.
      * @param pingFrequency
      */
-    protected Sensor(int pingFrequency, String hardwareID) {
+    protected Sensor(String hardwareID, int pingFrequency) {
         this.pingFrequency = pingFrequency;
         updateSensor = true;
         prevTime = System.currentTimeMillis();
@@ -33,7 +33,7 @@ public abstract class Sensor <T> {
      * pingFrequency is how often the sensor data should be updated, leaving this at 0 will ping the sensor every code loop.
      * @param pingFrequency
      */
-    protected Sensor(int pingFrequency, String hardwareID, HardwareMap hardwareMap) {
+    protected Sensor(String hardwareID, int pingFrequency, HardwareMap hardwareMap) {
         this.pingFrequency = pingFrequency;
         updateSensor = true;
         prevTime = System.currentTimeMillis();
@@ -47,7 +47,7 @@ public abstract class Sensor <T> {
      * @param hardwareID
      */
     public Sensor(String hardwareID){
-        this(0, hardwareID);
+        this(hardwareID, 0);
     }
 
     /**
@@ -56,12 +56,14 @@ public abstract class Sensor <T> {
     protected abstract void sensorInit(String hardwareID);
 
     /**
-     * This method should have whatever code necessary to update sensor states, and SHOULD BE THE ONLY METHOD THAT PINGS A SENSOR
+     * This method should have whatever code necessary to update s
+     * ensor states, and SHOULD BE THE ONLY METHOD THAT PINGS A SENSOR
      */
     protected abstract T pingSensor();
 
     /**
-     * This method should return true if the sensor is plugged in, and false if it is not. It should return true if not known.
+     * This method should return true if the sensor is plugged in,
+     * and false if it is not. It should return true if not known.
      * @return
      */
     public abstract boolean isConnected();
@@ -69,7 +71,9 @@ public abstract class Sensor <T> {
     public abstract String getDeviceName();
 
     /**
-     * This method checks if deltaTime since last ping is more than the desired pingFrequency, and returns the deltaTime since last sensor ping.
+     * This method checks if deltaTime since last ping is more
+     * than the desired pingFrequency, and returns the deltaTime
+     * since last sensor ping.
      * @return
      */
     public final long update(){
