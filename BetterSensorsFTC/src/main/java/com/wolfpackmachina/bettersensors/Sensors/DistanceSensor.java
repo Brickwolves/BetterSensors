@@ -20,7 +20,7 @@ public class DistanceSensor extends Sensor<Distance> {
     private final RingBuffer<Double> distanceBuffer = new RingBuffer<>(DIST_AVERAGING_BUFFER_LENGTH, 0.0);
 
     public DistanceSensor(int pingFrequency, String hardwareID){
-        super(pingFrequency, hardwareID);
+        super(hardwareID, pingFrequency);
     }
 
     @Override

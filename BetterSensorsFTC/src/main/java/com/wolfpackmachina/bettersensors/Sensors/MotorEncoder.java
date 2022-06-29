@@ -12,7 +12,7 @@ public class MotorEncoder extends Sensor<Double> {
     MotorEx encoder;
 
     public MotorEncoder(int pingFrequency, String hardwareID){
-        super(pingFrequency, hardwareID);
+        super(hardwareID, pingFrequency);
     }
 
     @Override

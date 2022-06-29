@@ -31,7 +31,7 @@ public class Gyro extends Sensor<AngularPosition> {
     private AngleInterpreter rollInterpreter;
 
     public Gyro(int pingFrequency, String hardwareID){
-        super(pingFrequency, hardwareID);
+        super(hardwareID, pingFrequency);
     }
 
     @Override

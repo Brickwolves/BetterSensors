@@ -15,7 +15,7 @@ public class ColorSensor extends Sensor<ColorAndDistReading> {
     ColorSensorV3 colorSensor;
 
     public ColorSensor(int pingFrequency, String hardwareID){
-        super(pingFrequency, hardwareID);
+        super(hardwareID, pingFrequency);
     }
 
     /**
