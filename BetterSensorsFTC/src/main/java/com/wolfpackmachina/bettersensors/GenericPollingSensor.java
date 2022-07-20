@@ -7,7 +7,7 @@ public class GenericPollingSensor <T> extends Sensor<T>{
     GenericDataSupplier<T> dataSupplier;
 
     public GenericPollingSensor(int pingFrequency, GenericDataSupplier<T> dataSupplier){
-        super(pingFrequency, "");
+        super("", pingFrequency);
     }
 
     @Override
