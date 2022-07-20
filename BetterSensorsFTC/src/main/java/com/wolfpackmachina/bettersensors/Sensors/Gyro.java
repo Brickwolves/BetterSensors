@@ -30,7 +30,7 @@ public class Gyro extends Sensor<AngularPosition> {
     private AngleInterpreter pitchInterpreter;
     private AngleInterpreter rollInterpreter;
 
-    public Gyro(int pingFrequency, String hardwareID){
+    public Gyro(String hardwareID, int pingFrequency){
         super(hardwareID, pingFrequency);
     }
 

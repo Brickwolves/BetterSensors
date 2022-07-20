@@ -11,7 +11,7 @@ public class MotorEncoder extends Sensor<Double> {
     String deviceName;
     MotorEx encoder;
 
-    public MotorEncoder(int pingFrequency, String hardwareID){
+    public MotorEncoder(String hardwareID, int pingFrequency){
         super(hardwareID, pingFrequency);
     }
 

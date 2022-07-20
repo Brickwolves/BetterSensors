@@ -19,7 +19,7 @@ public class DistanceSensor extends Sensor<Distance> {
     com.qualcomm.robotcore.hardware.DistanceSensor distanceSensor;
     private final RingBuffer<Double> distanceBuffer = new RingBuffer<>(DIST_AVERAGING_BUFFER_LENGTH, 0.0);
 
-    public DistanceSensor(int pingFrequency, String hardwareID){
+    public DistanceSensor(String hardwareID, int pingFrequency){
         super(hardwareID, pingFrequency);
     }
 
